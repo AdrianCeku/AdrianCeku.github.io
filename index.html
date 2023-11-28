@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <script type="module" src="./js/main.js"></script> 
+    <script type="module" src="./js/anim.js"></script>
+
+  </head>
+  <body>
+    <nav id="navbar">
+      <ul id="navbar-list">
+        <li class="navbar-item">
+          <svg id="arrow"
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 448 512">
+            <path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+          </svg>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="#about">
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 448 512">
+              <path fill= "currentColor" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
+            </svg>
+            <span class="navbar-text"> About </span>
+          </a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="#arcade">
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 640 512">
+              <path fill="currentColor" d="M192 64C86 64 0 150 0 256S86 448 192 448H448c106 0 192-86 192-192s-86-192-192-192H192zM496 168a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24v32h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H216v32c0 13.3-10.7 24-24 24s-24-10.7-24-24V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h32V200z"/>
+            </svg>
+            <span class="navbar-text"> Arcade Machine </span>
+          </a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="#qr-code">
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 448 512">
+              <path fill="currentColor" d="M0 80C0 53.5 21.5 32 48 32h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80zM64 96v64h64V96H64zM0 336c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V336zm64 16v64h64V352H64zM304 32h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H304c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48zm80 64H320v64h64V96zM256 304c0-8.8 7.2-16 16-16h64c8.8 0 16 7.2 16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s7.2-16 16-16s16 7.2 16 16v96c0 8.8-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s-7.2-16-16-16s-16 7.2-16 16v64c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V304zM368 480a16 16 0 1 1 0-32 16 16 0 1 1 0 32zm64 0a16 16 0 1 1 0-32 16 16 0 1 1 0 32z"/>
+            </svg>
+            <span class="navbar-text"> QR-Code Generator </span>
+          </a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="#gta">
+            <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            height="1em" 
+            viewBox="0 0 384 512">
+            <path fill="currentColor" d="M19.7 34.5c16.3-6.8 35 .9 41.8 17.2L192 364.8 322.5 51.7c6.8-16.3 25.5-24 41.8-17.2s24 25.5 17.2 41.8l-160 384c-5 11.9-16.6 19.7-29.5 19.7s-24.6-7.8-29.5-19.7L2.5 76.3c-6.8-16.3 .9-35 17.2-41.8z"/>
+            </svg>
+            <span class="navbar-text"> GTA V Scripts </span>
+          </a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="./credits.txt">
+            <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 512 512">
+            <path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+          <span class="navbar-text"> Credits / Impressum </span>
+          </a>
+        </li>
+        <li class="navbar-item">
+          <element class="navbar-link" id="switchmode">
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 512 512">
+              <path fill="currentColor" d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/>
+            </svg>
+            <span class="navbar-text"> Light / Darkmode </span>
+          </element>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div id="about">
+        <h1 class="hidden"> 
+          <p>Hi! My name is <span> Adrian.</span></p>
+          <p>Im a <span id="description"></span></p>
+        </h1>
+        <svg 
+          id="layered-peaks" 
+          viewBox="0 720 2560 720" 
+          xmlns="http://www.w3.org/2000/svg" 
+          xmlns:xlink="http://www.w3.org/1999/xlink" 
+          version="1.1">
+          <path id="layer-1" fill="currentColor" d="M0 980L366 1005L731 1043L1097 922L1463 1031L1829 1019L2194 866L2560 955L2560 1441L2194 1441L1829 1441L1463 1441L1097 1441L731 1441L366 1441L0 1441Z"></path>
+          <path id="layer-2" fill="currentColor" d="M0 994L366 1053L731 1121L1097 1082L1463 997L1829 1014L2194 966L2560 1062L2560 1441L2194 1441L1829 1441L1463 1441L1097 1441L731 1441L366 1441L0 1441Z"></path>
+          <path id="layer-3" fill="currentColor" d="M0 1104L366 1152L731 1122L1097 1183L1463 1080L1829 1071L2194 1144L2560 1188L2560 1441L2194 1441L1829 1441L1463 1441L1097 1441L731 1441L366 1441L0 1441Z"></path>
+          <path id="layer-4" fill="currentColor" d="M0 1184L366 1283L731 1196L1097 1273L1463 1268L1829 1268L2194 1248L2560 1264L2560 1441L2194 1441L1829 1441L1463 1441L1097 1441L731 1441L366 1441L0 1441Z"></path>
+          <path id="layer-5" fill="currentColor" d="M0 1277L366 1330L731 1355L1097 1318L1463 1366L1829 1353L2194 1334L2560 1309L2560 1441L2194 1441L1829 1441L1463 1441L1097 1441L731 1441L366 1441L0 1441Z"></path>
+        </svg>
+      </div>
+      <div id="arcade-div">
+        <h1 class="hidden"> Arcade Machine</h1>
+        <h3 class="hidden">(Right Click to toggle free cam)</h3>
+        
+        <canvas id="arcade"></canvas>
+        <button class="button hidden" onclick="window.open('https://github.com/AdrianCeku/portofolio/tree/main/game', '_blank')">
+          <span> Check it out on Github!</span>
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            height="1em" 
+            viewBox="0 0 496 512">
+            <path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+          </svg>
+        </button>  
+        <canvas id="game"></canvas>
+        <script defer type="module" src="./js/3d.js"></script>
+        <script defer type="module" src="./game/game.js"></script>
+      </div>
+      <div id="qr-code">
+        <h1 class="hidden"> QR-Code Generator (Python)</h1>
+        <img class="hidden" src="assets/img/qrgenerator.png">
+        <button class="button hidden" onclick="window.open('https://github.com/AdrianCeku/qrcode-generator-GUI', '_blank')">
+          <span> Check it out on Github!</span>
+          <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          height="1em" 
+          viewBox="0 0 496 512">
+          <path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+        </svg>
+      </button>    
+    </div>
+    <div id="gta" class="hidden">
+      <h1> GTA V Scripts</h1>
+      <img class="hidden" src="assets/img/shopimage_bundle.png">
+      <button class="button hidden" onclick="window.open('https://inter-development.tebex.io/category/2443329', '_blank')">
+        <span> Check out the store!</span>
+      </button>    
+    </div>  
+    </main>
+  </body>
+</html>

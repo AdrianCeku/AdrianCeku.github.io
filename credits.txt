@@ -1,0 +1,30 @@
+Credits:
+
+navbar svgs: 		                        Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+
+about me svgs: 		                        https://app.haikei.app/
+
+website font:					Rubik from Google Fonts (https://fonts.google.com/specimen/Rubik)
+
+Arcade 3d model:	                        "Arcade Game Machine 001" (https://skfb.ly/ozIIz) by @sanyabeast is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+3d background dark: 	                        https://unsplash.com/de/fotos/UWY8nGROvbk
+
+3d background light:	                        https://wallpaperaccess.com/orange-space-4k
+
+Game font: 	                                https://www.dafont.com/dash.font
+
+Game background:	                        https://norma-2d.itch.io/space-backgrounds-pack
+
+Game planet sprites: 	                        https://deep-fold.itch.io/pixel-planet-generator
+
+Game Coding(Horizon Strike):			Adrian Ceku
+
+3d library:					three.js (https://github.com/mrdoob/three.js)
+
+Other coding:					Adrian Ceku
+
+
+Impressum:
+
+Verantworlicher:                                Adrian Ceku (cekuadrian4@gmail.com)
