@@ -69,7 +69,7 @@ const enemyTankSprite = new Image()
 enemyTankSprite.src = url + "enemy_tank.png"
 
 const enemySpeederSprite = new Image()
-enemySpeederSprite.src = url + "enemy_Speeder.png"
+enemySpeederSprite.src = url + "enemy_speeder.png"
 
 const enemyBossSprite = new Image()
 enemyBossSprite.src = url + "enemy_boss_new.png"
