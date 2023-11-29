@@ -242,19 +242,46 @@ h1,h2,h3 {
 }
 
 #arcade-div h1{
-    position: relative;
+    position: absolute;
     margin: 0px;
-    top: 8%;
+    top: 100vh;
     z-index: 1;
 }
 
 #arcade-div h3{
-    position: relative;
+    position: absolute;
     margin: 0px;
-    top: 8%;
     z-index: 1;
     font-style: italic;
     opacity: 0.6;
+}
+
+#arcade-div h3:nth-child(1) {
+    top: 103vh;
+}
+
+#arcade-div h3:nth-child(2) {
+    top: 106vh;
+}
+
+#arcade-div h3:nth-child(3) {
+    top: 109vh;
+}
+
+#arcade-div h3:nth-child(4) {
+    top: 112vh;
+}
+
+#arcade-div h3:nth-child(5) {
+    top: 115vh;
+}
+
+#arcade-div h3:nth-child(6) {
+    top: 118vh;
+}
+
+#arcade-div h3:nth-child(7) {
+    top: 121vh;
 }
 
 #arcade {
@@ -263,7 +290,6 @@ h1,h2,h3 {
     min-width: 100%;
     min-height: 100vh;
     margin: 0;
-    transform: translateY(-5%);
 }
 
 #game {
