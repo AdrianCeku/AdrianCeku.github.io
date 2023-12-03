@@ -71,7 +71,7 @@ export class Enemy {
     }
 
     destory() {
-        game.score += this.score
+        this.game.score += this.score
         this.game.particles.push(new Explosion(this.game, this.x + this.width/4, this.y + this.height/2, this.width, this.height, this.speedX * this.speedMultiplier / 10, 0, null))
         if(Math.random() <= this.dropchance) this.game.powerups.push(this.game.randomPowerup(this.game, this.x, this.y, 100, 100))
         this.markedForDeletion = true
