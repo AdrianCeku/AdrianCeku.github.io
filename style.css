@@ -16,6 +16,8 @@
     --navbar-width: 4rem;
     --navbar-width-extended: 10rem;
     --scroll-progress: 0;
+    --arcade-div-h3-top-base: 99vh;
+    --arcade-div-h3-top-increment: 3vh;
 }
 
 .hidden {
@@ -257,31 +259,39 @@ h1,h2,h3 {
 }
 
 #arcade-div h3:nth-child(1) {
-    top: 103vh;
+    top: calc(var(--arcade-div-h3-top-base) + var(--arcade-div-h3-top-increment) * 1);
 }
 
 #arcade-div h3:nth-child(2) {
-    top: 106vh;
+    top: calc(var(--arcade-div-h3-top-base) + var(--arcade-div-h3-top-increment) * 2);
 }
 
 #arcade-div h3:nth-child(3) {
-    top: 109vh;
+    top: calc(var(--arcade-div-h3-top-base) + var(--arcade-div-h3-top-increment) * 3);
 }
 
 #arcade-div h3:nth-child(4) {
-    top: 112vh;
+    top: calc(var(--arcade-div-h3-top-base) + var(--arcade-div-h3-top-increment) * 4);
 }
 
 #arcade-div h3:nth-child(5) {
-    top: 115vh;
+    top: calc(var(--arcade-div-h3-top-base) + var(--arcade-div-h3-top-increment) * 5);
 }
 
 #arcade-div h3:nth-child(6) {
-    top: 118vh;
+    top: calc(var(--arcade-div-h3-top-base) + var(--arcade-div-h3-top-increment) * 6);
 }
 
 #arcade-div h3:nth-child(7) {
-    top: 121vh;
+    top: calc(var(--arcade-div-h3-top-base) + var(--arcade-div-h3-top-increment) * 7);
+}
+
+#arcade-div h3:nth-child(8) {
+    top: calc(var(--arcade-div-h3-top-base) + var(--arcade-div-h3-top-increment) * 8);
+}
+
+#arcade-div h3:nth-child(9) {
+    top: calc(var(--arcade-div-h3-top-base) + var(--arcade-div-h3-top-increment) * 9);
 }
 
 #arcade {
