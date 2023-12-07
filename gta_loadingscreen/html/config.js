@@ -32,8 +32,10 @@ mp4autoplay : true, //If set to true, the video will start playing automatically
 mp4mute : true, //If set to true, the video will be muted. If set to false, the video will be played with audio. If you dont mute the video I recommend disabeling the audio player in the general settings above.
 mp4Volume : 15, //Sets the volume of the video (in %). 0 is muted and 100 is max volume.
 
+
+
 //These setting only apply if you use the youtube video instead of your own               ↓↓↓↓↓↓↓↓↓↓↓
-youtubeID : "nKa0MJjj0p8", //Add the videos ID like this: https://www.youtube.com/watch?v=dQw4w9WgXcQ --> dQw4w9WgXcQ. The id is the last part after "/watch?v=". (Playlists are also supported)
+youtubeID : "QdBZY2fkU-0", //Add the videos ID like this: https://www.youtube.com/watch?v=dQw4w9WgXcQ --> dQw4w9WgXcQ. The id is the last part after "/watch?v=". (Playlists are also supported)
 ytMuteAndAutoplay : 1, //1 = true, 0 = false ( Autoplay with audio is not supported by youtube, so you have to choose. For custom audios you can still replace the "audio.mp3" file in "/html/assets" or use mp4 an video)
 ytLoop : 1, //1 = true, 0 = false (If the embedded youtube video loops)
 
