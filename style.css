@@ -360,7 +360,7 @@ h1,h2,h3 {
     width: 100%;
 }
 
-#gta a {
+#gta a, #arcade-div a {
     align-self: center;
     margin: 0;
     padding: 0;
