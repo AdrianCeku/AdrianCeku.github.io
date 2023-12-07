@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inter-active-loadingscreen</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script defer src="./config.js"></script>
+    <script defer src="./main.js"></script> 
+    <script defer src="./loadingbar.js"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li id="trailer-button"><span class="nav-value">Trailer</span></li>
+        <li id="player-button"><span class="nav-value">Player</s<span></li>
+        <li id="controls-button"><span class="nav-value">Controls<span></li>
+        <li id="news-button"><span class="nav-value">News<span></li>
+        <li id="game-button"><span class="nav-value">Game<span></li>
+      </ul>
+    </nav>
+    <main>
+      <div id="backgrounds">
+        <img id="background-1" src="./assets/img/bg/bg-1.png" onerror="imgError()"></img>
+        <img id="background-2" src="./assets/img/bg/bg-2.png" onerror="imgError()"></img>
+        <img id="background-3" src="./assets/img/bg/bg-3.png" onerror="imgError()"></img>
+        <img id="background-4" src="./assets/img/bg/bg-4.png" onerror="imgError()"></img>
+        <img id="background-5" src="./assets/img/bg/bg-5.png" onerror="imgError()"></img>
+        <img id="background-6" src="./assets/img/bg/bg-6.png" onerror="imgError()"></img>
+        <img id="background-7" src="./assets/img/bg/bg-7.png" onerror="imgError()"></img>
+        <img id="background-8" src="./assets/img/bg/bg-8.png" onerror="imgError()"></img>
+        <img id="background-9" src="./assets/img/bg/bg-9.png" onerror="imgError()"></img>
+      </div>
+      <video id="background-video" src="./assets/bg.mp4" muted autoplay loop></video>
+      <div id="rgbgetter"><svg id="rgbgetter-svg" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" fill="currentColor">
+        <path d="M222.7 32.1c5 16.9-4.6 34.8-21.5 39.8C121.8 95.6 64 169.1 64 256c0 106 86 192 192 192s192-86 192-192c0-86.9-57.8-160.4-137.1-184.1c-16.9-5-26.6-22.9-21.5-39.8s22.9-26.6 39.8-21.5C434.9 42.1 512 140 512 256c0 141.4-114.6 256-256 256S0 397.4 0 256C0 140 77.1 42.1 182.9 10.6c16.9-5 34.8 4.6 39.8 21.5z"/>
+      </svg></div>
+      <div id="audio-div">
+        <audio id="audio-player" src="https://cdn.pixabay.com/download/audio/2023/11/04/audio_f98ed9fd95.mp3" autoplay loop></audio>
+<!--         <audio id="audio-player" src="./assets/audio.mp3" autoplay loop></audio> -->
+        <div id="audio-controls">
+          <button id="play-button">
+            <svg id="play-svg" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" fill="currentColor">
+              <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/>
+            </svg>
+            <svg id="pause-svg" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" fill="currentColor"">
+              <path d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z"/>
+            </svg>
+          </button>
+          <input id="volume-slider" type="range" min="0" max="100" value="5">
+        </div>
+      </div>
+      <div id="loading-bar">
+        <div id="bars">
+          <div id="preview-bar"></div>
+          <div id="progress-bar"></div>
+        </div>
+        <div id="loading-notification"><span id="loading-notification-former"></span><span id="exit-key"></span><span id="loading-notification-latter"></span></div>
+      </div>
+      <div id="discordwidget-div">
+      </div>
+      <div id="trailer-div">
+        <div id="trailer-video">
+          <iframe id="yt-video" src=""></iframe>
+          <video id="mp4-video" src="./assets/video.mp4" loop></video>
+        </div>
+      </div>
+      <div id="player-div">
+        <div id="player-greeting">
+          <span id="playername"></span><span id="playername-value">Player</span><span id="playername-exc">.</span>
+        </div>
+        <div id="server-greeting">
+          <span id="servername"></span><span id="servername-value"></span><span id="servername-exc">!</span>
+        </div>
+        <div id="money">
+          <svg id ="cash" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="currentColor">
+            <path d="M64 64C28.7 64 0 92.7 0 128V384c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H64zm64 320H64V320c35.3 0 64 28.7 64 64zM64 192V128h64c0 35.3-28.7 64-64 64zM448 384c0-35.3 28.7-64 64-64v64H448zm64-192c-35.3 0-64-28.7-64-64h64v64zM288 160a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/>
+          </svg>
+          <span id="cash-value">$458</span>
+          <svg id="bank" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" fill="currentColor">
+            <path d="M243.4 2.6l-224 96c-14 6-21.8 21-18.7 35.8S16.8 160 32 160v8c0 13.3 10.7 24 24 24H456c13.3 0 24-10.7 24-24v-8c15.2 0 28.3-10.7 31.3-25.6s-4.8-29.9-18.7-35.8l-224-96c-8-3.4-17.2-3.4-25.2 0zM128 224H64V420.3c-.6 .3-1.2 .7-1.8 1.1l-48 32c-11.7 7.8-17 22.4-12.9 35.9S17.9 512 32 512H480c14.1 0 26.5-9.2 30.6-22.7s-1.1-28.1-12.9-35.9l-48-32c-.6-.4-1.2-.7-1.8-1.1V224H384V416H344V224H280V416H232V224H168V416H128V224zM256 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+          </svg>
+          <span id="bank-value">$15702</span>
+        </div>
+        <div id = "id-card">
+          <div id="firstname-info">
+            <span id="firstname"></span>
+            <span id="firstname-value">John</span>
+          </div>
+          <div id="lastname-info">
+            <span id="lastname"></span>
+            <span id="lastname-value">Doe</span>
+          </div>
+          <div id="personal-info">
+            <span id="sex"> </span><span id="sex-value">Male</span> 
+            <span id="birthdate"></span><span id="birthdate-value">1992-07-02</span>
+            <span id="nationality"></span><span id="nationality-value">Los Santos</span>
+            <span id="lsid"></span><span id="lsid-value">LCRP420</span>
+          </div>
+          <div id="job-info">
+            <span id= "job"></span>
+            <span id="job-value">Los Santos Customs</span>
+            <span id="jobgrade-value">Manager</span>
+          </div>
+          <div id="gang-info">
+            <span id="gang"></span>
+            <span id="gang-value">Lost MC</span>
+            <span id="ganggrade-value">Enforcer</span>
+          </div>
+        </div>
+      </div>
+      <div id="controls-div">
+        <div id="keyboard">
+          <div id="first-row"> <!-- First Row -->
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="ESC"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="F1"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="F2"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="F3"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="F4"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="F5"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="F6"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="F7"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="F8"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="F9"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="F10"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="F11"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="F12"></span></div>
+          </div>     
+          <div id="second-row"> <!-- Second Row -->
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="^"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="1key"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="2key"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="3key"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="4key"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="5key"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="6key"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="7key"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="8key"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="9key"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="0key"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="?"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="´"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="BACKSPACE"></span></div>
+          </div>        
+          <div id="third-row"> <!-- Third Row -->
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="TAB"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="Q"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="W"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="E"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="R"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="T"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="Z"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="U"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="I"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="O"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="P"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="Ü"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="+"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="ENTER"></span></div>
+          </div>
+          <div id="fourth-row"> <!-- Fourth Row -->
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="CAPS"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="A"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="S"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="D"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="F"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="G"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="H"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="J"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="K"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="L"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="Ö"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="Ä"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="#"></span></div>
+          </div>
+          <div id="fifth-row"> <!-- Fifth Row -->
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="SHIFT"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="<"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="Y"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="X"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="C"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="V"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="B"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="N"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="M"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id=","></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="."></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="-"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="RIGHT SHIFT"></span></div>
+          </div>
+          <div id="sixth-row"> <!-- Sixth Row -->
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="CTRL"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="WIN"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="ALT"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="SPACE"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="ALT CTRL"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="FN"></span></div>
+            <div class="key" onclick="updateTooltip.call(this)"><span class="key-value" id="RCTRL"></span></div>
+          </div>
+        </div>
+        <div id="tooltip">
+          <h1 id="tooltip-title">Press a button</h1>
+          <span id="tooltip-text">To see what is does</span>
+        </div>
+      </div>
+      <div id="news-div">
+        <div id="news-1">
+          <img class="news-image" src="./assets/img/news-1.png">
+          <div>
+            <h1 id="news-title-1"></h1>
+            <span id="news-text-1">
+          </div>
+        </div>
+        <div id="news-2">
+          <img class="news-image" src="./assets/img/news-2.png">
+          <div>
+            <h1 id="news-title-2"></h1>
+            <span id="news-text-2"></span>
+          </div>
+        </div>
+      </div>
+      <div id="game-div">
+        <canvas id="game"></canvas>
+        <script type="module" src="/game/game.js"></script>
+      </div>
+    </main>
+    <div id="rgbgetter"></div>
+    <div id="config-div"></div>
+  </body>
+</html>

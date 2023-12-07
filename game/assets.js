@@ -57,7 +57,7 @@ export {playerSprite,
 }
 
 //assets
-const url = "../game/assets/"
+const url = "/game/assets/"
 
 const playerSprite = new Image()
 playerSprite.src = url + "player.png"
